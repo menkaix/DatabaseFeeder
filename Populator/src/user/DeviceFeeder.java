@@ -33,19 +33,6 @@ public class DeviceFeeder extends SuperFeeder{
 
 	}
 	
-	private String randomPlayer(){
-		String str = dbrecieve.requestString("#;", "players", "1 =1 limit 1000", "idplayer");
-		
-		StringTokenizer stk = new StringTokenizer(str, ";");
-		
-		Vector<String> vec = new Vector<String>();
-		
-		while(stk.hasMoreElements()){
-			vec.add(stk.nextToken());
-		}
-		
-		return vec.get(SuperFeeder.randomBetween(1, vec.size()));
-		
-	}
+	
 
 }
